@@ -4,6 +4,8 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
+var imagemin = require('gulp-imagemin');
+
 
 // Translate SASS to CSS
 gulp.task('sass', function(){
@@ -17,8 +19,19 @@ gulp.task('sass', function(){
     }))
 });
 
+//image minification -- only changes if necessary
+gulp.task('imagemin', function(){
+  var img_src = 'src/images/*';
+  var img_dest = 'app/images';
+  gulp.src(img_src)
+  // .pipe(changed(img_dest))
+  .pipe(imagemin())
+  .pipe(gulp.dest(img_dest));
+});
+
+
 // Watcher to rerun gulp on save
-gulp.task('watch', ['browserSync', 'sass'], function(){
+gulp.task('watch', ['browserSync', 'sass', 'imagemin'], function(){
   gulp.watch('src/scss/**/*.scss', ['sass']);
   // Other watchers
   gulp.watch('app/*.html', browserSync.reload);
