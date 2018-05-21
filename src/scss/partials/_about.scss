@@ -1,0 +1,27 @@
+#aboutSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 60vw;
+    height: 70vh;
+  }
+
+  .about-up {
+    color: $white;
+  }
+  .about-down {
+    color: $black;
+  }
+
+  p {
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+}
