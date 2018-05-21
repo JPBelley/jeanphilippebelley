@@ -14,7 +14,7 @@ $white: #f7f7f7;
 body {
   height: 100vh;
   width: 100vw;
-  background: $black;
+  background: $white;
   font-family: $font-1;
   font-size: 14px;
   overflow: hidden;
@@ -29,7 +29,7 @@ body {
 
   &.right::after {
     content: "";
-    background: $white;
+    background: $black;
     position: absolute;
     transform: rotate(1.5deg);
     top: -50px;
@@ -41,11 +41,11 @@ body {
   }
 
   &.left {
-    background: $white;
+    background: $black;
   }
   &.left::after {
     content: "";
-    background: $black;
+    background: $white;
     position: absolute;
     transform: rotate(1.5deg);
     top: -50px;
@@ -60,14 +60,30 @@ body {
 
     a {
       right: 100%;
-      color: $white;
+      color: $black;
     }
 
     li {
       span::after {
         content: "";
+        border-color: $black;
+      }
+    }
+
+    li:nth-child(n+4) a {
+      color: $white;
+
+      span::after {
+        content: "";
         border-color: $white;
       }
+    }
+  }
+
+  &.right nav {
+
+    li a {
+      color: $white;
     }
 
     li:nth-child(n+4) a {
@@ -79,26 +95,10 @@ body {
       }
     }
   }
-
-  &.right nav {
-
-    li a {
-      color: $black;
-    }
-
-    li:nth-child(n+4) a {
-      color: $white;
-
-      span::after {
-        content: "";
-        border-color: $white;
-      }
-    }
-  }
 }
 
 a {
-  color: $black;
+  color: $white;
   text-decoration: none;
 }
 
@@ -117,7 +117,6 @@ nav {
   left: 0;
   margin: 0 50px;
   text-align: right;
-  z-index: 100;
 
   ul {
     display: flex;
@@ -164,7 +163,7 @@ nav {
       bottom: 0;
       position: absolute;
       width: 0%;
-      border-bottom: 2px solid $black;
+      border-bottom: 2px solid $white;
       transition: 0.3s ease-in-out;
     }
 

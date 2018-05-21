@@ -2,27 +2,56 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 60vw;
   height: 100vh;
-  position: relative;
+  margin: 0 auto;
 
   .about-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 auto;
-    width: 60vw;
     height: 70vh;
   }
 
   .about-up {
-    color: $white;
+    color: $black;
   }
   .about-down {
-    color: $black;
+    color: $white;
   }
 
   p {
     font-size: 1.1rem;
     text-align: justify;
+  }
+
+  .about-icons {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    display: flex;
+  }
+
+  .single-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 50%;
+
+    &.github {
+      background-color: transparent;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    img {
+      width: 28px;
+    }
   }
 }
