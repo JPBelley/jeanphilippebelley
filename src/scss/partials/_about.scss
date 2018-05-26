@@ -1,16 +1,19 @@
-#aboutSection {
+body.left #aboutSection {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 60vw;
   height: 100vh;
   margin: 0 auto;
+  opacity: 1;
+  visibility: visible;
 
   .about-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 70vh;
+    z-index: 100;
   }
 
   .about-up {
@@ -54,4 +57,8 @@
       width: 28px;
     }
   }
+}
+body.right #aboutSection {
+  opacity: 0;
+  visibility: hidden;
 }

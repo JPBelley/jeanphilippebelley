@@ -28,7 +28,8 @@
     "gulp-autoprefixer": "^4.1.0",
     "gulp-babel": "^7.0.1",
     "gulp-concat": "^2.6.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
     "gulp-imagemin": "^4.1.0"
