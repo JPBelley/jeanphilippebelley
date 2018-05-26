@@ -5,7 +5,9 @@ $( document ).ready(function() {
     if($('body').hasClass('right')) {
       $('body').addClass('left').removeClass('right');
       $('.contactSection').removeClass('visible');
+      $('#skillsSection').removeClass('visible');
     } else {
+      $('#skillsSection').addClass('visible');
       $('body').addClass('right').removeClass('left');
     }
     return false;

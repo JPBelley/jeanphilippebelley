@@ -1,0 +1,34 @@
+#skillsSection {
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.skills-section {
+  position: absolute;
+  width: 60vw;
+  height: 100vh;
+  margin: 0 auto;
+
+  img {
+    width: 100px;
+  }
+}
+
+.skills-up,
+.skills-down {
+  height: 50vh;
+}
+
+.skills-up {
+
+  h2 {
+    color: $white;
+  }
+}
