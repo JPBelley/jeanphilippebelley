@@ -30,4 +30,5 @@ $( document ).ready(function() {
     $('.contactSection').addClass('visible');
     return false;
   })
+
 });
