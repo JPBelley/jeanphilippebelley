@@ -1,21 +1,27 @@
 // load the require modules
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var autoprefixer = require('gulp-autoprefixer');
-var browserSync = require('browser-sync').create();
-var imagemin = require('gulp-imagemin');
+let gulp = require('gulp');
+let sass = require('gulp-sass');
+let uglify = require('gulp-uglify');
+let concat = require('gulp-concat');
+let autoprefixer = require('gulp-autoprefixer');
+let cleanCSS = require('gulp-clean-css');
+let browserSync = require('browser-sync').create();
+let imagemin = require('gulp-imagemin');
+let deploy = require('gulp-gh-pages');
 // À compléter
-// var babel = require("gulp-babel");
+// let babel = require("gulp-babel");
 
+// File paths
+let SCRIPTS_PATH = 'src/js/**/*.js';
+let CSS_PATH = 'src/scss/**/*.scss';
 
 // Translate SASS to CSS
 gulp.task('sass', function(){
-  return gulp.src('src/scss/**/*.scss')
+  return gulp.src(CSS_PATH)
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(autoprefixer())
     .pipe(concat('style.css'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('app/css/'))
     .pipe(browserSync.reload({
       stream: true
@@ -29,7 +35,8 @@ gulp.task('scripts', function(){
     .pipe(gulp.dest('app/js'));
 });
 
-// Image minification
+/* Image minification
+**************************/
 gulp.task('imagemin', function(){
   var img_src = 'src/images/*';
   var img_dest = 'app/images';
@@ -39,23 +46,26 @@ gulp.task('imagemin', function(){
   .pipe(gulp.dest(img_dest));
 });
 
-
-// Watcher to rerun gulp on save
+/** Watcher to rerun gulp on save
+**************************/
 gulp.task('default', ['browserSync', 'scripts', 'sass', 'imagemin'], function(){
-  gulp.watch('src/scss/**/*.scss', ['sass']);
+  gulp.watch(CSS_PATH, ['sass']);
   // Other watchers
   gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('src/js/**/*.js', ['scripts'], browserSync.reload);
-})
-// Watcher to rerun gulp on save
-gulp.task('watch', ['browserSync', 'sass', 'imagemin'], function(){
-  gulp.watch('src/scss/**/*.scss', ['sass']);
-  // Other watchers
-  gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('src/js/**/*.js', ['scripts'], browserSync.reload);
+  gulp.watch(SCRIPTS_PATH, ['scripts'], browserSync.reload);
 })
 
-// Setting up a web server for auto browser reload
+/** Watcher to rerun gulp on save
+**************************/
+gulp.task('watch', ['browserSync', 'sass', 'imagemin'], function(){
+  gulp.watch(CSS_PATH, ['sass']);
+  // Other watchers
+  gulp.watch('app/*.html', browserSync.reload);
+  gulp.watch(SCRIPTS_PATH, ['scripts'], browserSync.reload);
+})
+
+/** Setting up a web server for auto browser reload
+**************************/
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
@@ -63,3 +73,10 @@ gulp.task('browserSync', function() {
     },
   })
 })
+
+/** Push build to gh-pages
+**************************/
+gulp.task('deploy', function () {
+  return gulp.src("./src/**/*")
+    .pipe(deploy())
+});
