@@ -3,9 +3,7 @@ $( document ).ready(function() {
   // General test for now, to try the nav animations
   $('#skills').on('click', function() {
     if($('body').hasClass('right')) {
-      $('body').addClass('left').removeClass('right');
-      $('.contactSection').removeClass('visible');
-      $('#skillsSection').removeClass('visible');
+      return false;
     } else {
       $('#skillsSection').addClass('visible');
       $('body').addClass('right').removeClass('left');
@@ -20,6 +18,19 @@ $( document ).ready(function() {
       $('.contactSection').removeClass('visible');
     } else {
       $('body').addClass('right').removeClass('left');
+    }
+    return false;
+  })
+
+
+  // About Section
+  $('#about').on('click', function() {
+    if($('body').hasClass('left')) {
+      return false;
+    } else {
+      console.log('there');
+      $('#skillsSection').removeClass('visible');
+      $('body').addClass('left').removeClass('right');
     }
     return false;
   })

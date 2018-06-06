@@ -41,7 +41,10 @@ gulp.task('sass', function(){
 gulp.task('scripts', function(){
   return gulp.src('src/js/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('app/js'));
+    .pipe(gulp.dest('app/js'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 });
 
 /* Image minification
