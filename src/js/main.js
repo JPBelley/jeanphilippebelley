@@ -38,7 +38,7 @@ $( document ).ready(function() {
   // Open the contact section
   $('#contact').on('click', function() {
     $('body').addClass('right').removeClass('left');
-    $('.contactSection').addClass('visible');
+    $('#contactSection').addClass('visible');
     return false;
   })
 
