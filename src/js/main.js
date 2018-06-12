@@ -1,4 +1,9 @@
 $( document ).ready(function() {
+  // Menu burger
+  $('.hamburger').on('click', function(){
+    $(this).toggleClass('is-active');
+    $('nav').toggleClass('open-nav');
+  })
 
   // General test for now, to try the nav animations
   $('#porfolio').on('click', function() {
