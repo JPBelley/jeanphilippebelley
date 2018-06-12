@@ -36,6 +36,7 @@
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
-    "gulp-imagemin": "^4.1.0"
+    "gulp-imagemin": "^4.1.0",
+    "hamburgers": "^0.9.3"
   }
 }

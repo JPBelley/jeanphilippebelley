@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+
 // Fonts
 $font-1: 'Lato', sans-serif;
 
@@ -9,97 +10,7 @@ $white: #f7f7f7;
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  height: 100vh;
-  width: 100vw;
-  background: $white;
   font-family: $font-1;
-  font-size: 14px;
-  overflow: hidden;
-  transition-delay: 0.2s;
-  transition: 1s;
-  position: relative;
-
-  &::after {
-    transition-delay: 0.2s;
-    transition: 1s;
-  }
-
-  &.right::after {
-    content: "";
-    background: $black;
-    position: absolute;
-    transform: rotate(1.5deg);
-    top: -50px;
-    left: -20px;
-    height: 52vh;
-    width: 150%;
-    padding-top: 50px;
-    z-index: -1;
-  }
-
-  &.left {
-    background: $black;
-  }
-  &.left::after {
-    content: "";
-    background: $white;
-    position: absolute;
-    transform: rotate(1.5deg);
-    top: -50px;
-    left: -20px;
-    height: 52vh;
-    width: 150%;
-    padding-top: 50px;
-    z-index: -1;
-  }
-
-  &.left nav {
-
-    a {
-      right: 100%;
-      color: $black;
-    }
-
-    li {
-      span::after {
-        content: "";
-        border-color: $black;
-      }
-    }
-
-    li:nth-child(n+4) a {
-      color: $white;
-
-      span::after {
-        content: "";
-        border-color: $white;
-      }
-    }
-  }
-
-  &.right nav {
-
-    li a {
-      color: $white;
-    }
-
-    li:nth-child(n+4) a {
-      color: $black;
-
-      span::after {
-        content: "";
-        border-color: $black;
-      }
-    }
-  }
-}
-
-a {
-  color: $white;
-  text-decoration: none;
 }
 
 ul {
@@ -108,74 +19,171 @@ ul {
   margin: 0;
 }
 
-// To change in the nav.scss
-nav {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 0 50px;
-  text-align: right;
+@import "./responsive/_mobile.scss";
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: calc(100vh - 150px;);
-    padding: 70px 0 80px;
-  }
-
-  li {
-    font-size: 1.3em;
-    transform: none;
+@media screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    background: $white;
+    font-family: $font-1;
+    font-size: 14px;
+    overflow: hidden;
+    transition-delay: 0.2s;
+    transition: 1s;
     position: relative;
 
-
-    @for $i from 1 through 6 {
-      &:nth-child(#{$i}) a {
-        transition-delay: #{($i * .15)}s;
-      }
+    &::after {
+      transition-delay: 0.2s;
+      transition: 1s;
     }
 
-
-    a {
-      position: absolute;
-      transition: 1.3s;
-      left: 0;
-      right: 0;
-      font-weight: bold;
-    }
-
-    span {
-      position: relative;
-      padding-bottom: 4px;
-      // transition: 0.3s;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-
-    span::after {
+    &.right::after {
       content: "";
-      left: 50%;
-      bottom: 0;
+      background: $black;
       position: absolute;
-      width: 0%;
-      border-bottom: 2px solid $white;
-      transition: 0.3s ease-in-out;
+      transform: rotate(1.5deg);
+      top: -50px;
+      left: -20px;
+      height: 52vh;
+      width: 150%;
+      padding-top: 50px;
+      z-index: -1;
     }
 
-    span:hover::after {
-      right: 0;
-      left: 1px;
-      width: 100%;
+    &.left {
+      background: $black;
+    }
+    &.left::after {
+      content: "";
+      background: $white;
+      position: absolute;
+      transform: rotate(1.5deg);
+      top: -50px;
+      left: -20px;
+      height: 52vh;
+      width: 150%;
+      padding-top: 50px;
+      z-index: -1;
+    }
+
+    &.left nav {
+
+      a {
+        right: 100%;
+        color: $black;
+      }
+
+      li {
+        span::after {
+          content: "";
+          border-color: $black;
+        }
+      }
+
+      li:nth-child(n+4) a {
+        color: $white;
+
+        span::after {
+          content: "";
+          border-color: $white;
+        }
+      }
+    }
+
+    &.right nav {
+
+      li a {
+        color: $white;
+      }
+
+      li:nth-child(n+4) a {
+        color: $black;
+
+        span::after {
+          content: "";
+          border-color: $black;
+        }
+      }
     }
   }
-}
 
-@import './components/_home';
-@import './partials/_about';
-@import './partials/_skills';
-@import './partials/_contact';
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  // To change in the nav.scss
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 50px;
+    text-align: right;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: calc(100vh - 150px;);
+      padding: 70px 0 80px;
+    }
+
+    li {
+      font-size: 1.3em;
+      transform: none;
+      position: relative;
+
+
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) a {
+          transition-delay: #{($i * .15)}s;
+        }
+      }
+
+
+      a {
+        position: absolute;
+        transition: 1.3s;
+        left: 0;
+        right: 0;
+        font-weight: bold;
+      }
+
+      span {
+        position: relative;
+        padding-bottom: 4px;
+        // transition: 0.3s;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      span::after {
+        content: "";
+        left: 50%;
+        bottom: 0;
+        position: absolute;
+        width: 0%;
+        border-bottom: 2px solid $white;
+        transition: 0.3s ease-in-out;
+      }
+
+      span:hover::after {
+        right: 0;
+        left: 1px;
+        width: 100%;
+      }
+    }
+  }
+
+  @import './components/_home';
+  @import './partials/_about';
+  @import './partials/_skills';
+  @import './partials/_contact';
+}
+// Buger menu librairy
+@import './librairies/hamburgers/hamburgers';

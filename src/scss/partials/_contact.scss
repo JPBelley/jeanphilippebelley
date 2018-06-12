@@ -1,6 +1,13 @@
 #contactSection {
   display: flex;
   justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
 
   input {
     background-color: transparent;
