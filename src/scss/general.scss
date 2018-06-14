@@ -6,11 +6,13 @@ $font-1: 'Lato', sans-serif;
 // Colors
 $black: #272626;
 $white: #f7f7f7;
+$grey: grey;
 
 * {
   margin: 0;
   padding: 0;
   font-family: $font-1;
+  box-sizing: border-box;
 }
 
 ul {
@@ -181,7 +183,7 @@ ul {
     }
   }
 
-  button.hamburger {
+  .mobile-nav {
     display: none;
   }
 

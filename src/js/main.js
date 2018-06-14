@@ -3,6 +3,7 @@ $( document ).ready(function() {
   $('.hamburger').on('click', function(){
     $(this).toggleClass('is-active');
     $('nav').toggleClass('open-nav');
+    $('.mobile-nav').toggleClass('open-mobile-nav');
   })
 
   // General test for now, to try the nav animations

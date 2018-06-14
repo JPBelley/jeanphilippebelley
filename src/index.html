@@ -2,12 +2,20 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jean-Philippe Belley</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="left">
 
   <!-- Building the menu/nav -->
+  <div class="mobile-nav">
+    <button class="hamburger hamburger--collapse" type="button" aria-label="Menu" aria-controls="navigation">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
   <nav class="right">
     <ul>
       <li id="home"> <a href=""> <span>Home</span> </a> </li>
@@ -107,8 +115,8 @@
 
   <!-- Contact Section -->
   <section id="contactSection">
-    <form class="" action="index.html" method="post">
-      <div class="contact-container">
+    <div class="contact-container">
+      <form class="" action="index.html" method="post">
         <div class="contact-up">
           <div class="contact-name">
             <div class="input">
@@ -132,8 +140,8 @@
           <button type="submit" name="button">Send</button>
           <textarea name="name" placeholder="Message"></textarea>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </section><!-- Contact Section End -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
