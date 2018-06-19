@@ -5,8 +5,14 @@ body.left #aboutSection {
   width: 60vw;
   height: 100vh;
   margin: 0 auto;
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+  }
 
   .about-container {
     display: flex;
@@ -58,7 +64,7 @@ body.left #aboutSection {
     }
   }
 }
-body.right #aboutSection {
+#aboutSection {
   opacity: 0;
   visibility: hidden;
   position: absolute;

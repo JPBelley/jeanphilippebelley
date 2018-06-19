@@ -98,12 +98,19 @@ nav {
   left: 0;
   margin: 0 50px;
   text-align: right;
+  visibility: hidden;
+  opacity: 0;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
 
   ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100vh - 150px;);
+    height: 100vh;
     padding: 70px 0 80px;
   }
 

@@ -6,6 +6,12 @@ $( document ).ready(function() {
     $('.mobile-nav').toggleClass('open-mobile-nav');
   })
 
+  $('.visit a').on('click', function() {
+    $('#homeSection').addClass('hide-home');
+    $('#aboutSection').addClass('visible');
+    $('nav').addClass('visible');
+  })
+
   // General test for now, to try the nav animations
   $('#porfolio').on('click', function() {
     if($('body').hasClass('right')) {

@@ -8,10 +8,119 @@ img {
 
 section {
   width: 100%;
-  padding: 50px 20px;
+  padding: 75px 20px;
   background-color: $white;
 
   &:nth-child(2n) {
     background-color: $black;
+  }
+}
+
+#homeSection {
+  background-image: linear-gradient(#1B1C1E, rgba(0, 0, 0, 0.4)), url("../images/jpswag.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 250px;
+  position: relative;
+
+  .hero-text {
+    color: $white;
+  }
+
+  .visit {
+    position: absolute;
+    bottom: 30px; left: 0; right: 0;
+    text-align: center;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+      content: "v";
+      position: absolute;
+      top: 15px; right: 0; left: 0;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+#portfolioSection {
+  .portfolio-up {
+    margin-bottom: 25px;
+  }
+  h3 {
+    color: $white;
+  }
+}
+
+#aboutSection {
+
+  p {
+    color: $white;
+    padding-bottom: 25px;
+  }
+
+  .about-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // a {
+      // background-color: $white;
+      // border-radius: 50%;
+    // }
+  }
+  img {
+    width: 50px;
+    margin: 0 10px;
+  }
+}
+
+#contactSection {
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  textarea,
+  input {
+    background-color: transparent;
+    border: 1px solid $black;
+    color: $black;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    outline: 0;
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  button {
+    background-color: $black;
+    border: 1px solid $black;
+    border-radius: 25px;
+    color: $white;
+    width: 150px;
+    padding: 10px;
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+
+  .contact-up {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-down {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
