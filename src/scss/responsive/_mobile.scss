@@ -14,6 +14,10 @@ section {
   &:nth-child(2n) {
     background-color: $black;
   }
+
+  .single-img {
+    text-align: center;
+  }
 }
 
 #homeSection {
@@ -123,4 +127,12 @@ section {
     display: flex;
     flex-direction: column-reverse;
   }
+}
+
+.mobile-img {
+  display: inline;
+}
+
+.desktop-img {
+  display: none;
 }

@@ -1,3 +1,42 @@
 #portfolioSection {
-  display: none;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+  }
+
+  .portfolio-section {
+    position: absolute;
+    width: 60vw;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .portfolio-up,
+  .portfolio-down {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+  }
+
+  .portfolio-down {
+    color: $white;
+  }
 }
