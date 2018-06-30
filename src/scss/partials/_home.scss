@@ -25,18 +25,67 @@
   .visit {
     position: fixed;
     bottom: 100px;
-  }
+    cursor: pointer;
 
-  a {
-    color: $white;
-    position: relative;
+    span {
+      opacity: 0;
+      visibility: hidden;
+      transition: 4s;
+    }
 
-    &::after {
-      content: "v";
-      position: absolute;
-      top: 15px; right: 0; left: 0;
-      margin: 0 auto;
-      text-align: center;
+    a {
+      color: $white;
+      position: relative;
+
+      &::after {
+        content: "v";
+        position: absolute;
+        top: 15px; right: 0; left: 0;
+        margin: 0 auto;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: 4s;
+      }
+      &.fade-in::after {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
     }
   }
+
+  .my-name {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+
+    span {
+      opacity: 0;
+      visibility: hidden;
+      transition: 4s;
+
+      &.fade-in {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .my-job {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    span {
+      opacity: 0;
+      visibility: hidden;
+      transition: 4s;
+    }
+  }
+}
+.fade-in {
+  opacity: 1 !important;
+  visibility: visible !important;
 }

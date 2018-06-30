@@ -3,7 +3,7 @@
   justify-content: center;
   visibility: hidden;
   opacity: 0;
-  
+
   &.visible {
     visibility: visible;
     opacity: 1;
@@ -11,16 +11,15 @@
 
   input {
     background-color: transparent;
-    border: 1px solid $white;
+    border: 2px solid $black;
     padding: 20px 10px;
     outline: 0;
     font-size: 0.9rem;
 
     &::placeholder {
-      color: $white;
+      color: $black;
       font-size: 0.9rem;
     }
-
   }
 
   .input {
@@ -56,7 +55,7 @@
 
     input {
       width: 100%;
-      color: $white;
+      color: $black;
     }
   }
 
@@ -67,15 +66,16 @@
       padding: 15px;
       background-color: transparent;
       text-transform: uppercase;
-      border: 1px solid $black;
+      border: 2px solid $white;
       outline: 0;
       font-size: 0.9rem;
+      color: $white;
     }
 
     textarea {
       background-color: transparent;
       width: 100%;
-      border: 1px solid $black;
+      border: 2px solid $white;
       height: 18vh;
       padding: 15px 10px;
       font-family: $font-1;
@@ -85,7 +85,7 @@
       resize: none;
 
       &::placeholder {
-        color: $black;
+        color: $white;
         font-family: $font-1;
         font-size: 0.9rem;
       }
