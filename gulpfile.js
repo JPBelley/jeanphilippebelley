@@ -53,7 +53,7 @@ gulp.task('scripts', function(){
 gulp.task('imagemin', function(){
   var img_src = 'src/images/*';
   var img_dest = 'app/images';
-  gulp.src(img_src)
+  return gulp.src(img_src)
   // .pipe(changed(img_dest))
   .pipe(imagemin())
   .pipe(gulp.dest(img_dest));
@@ -90,6 +90,6 @@ gulp.task('browserSync', function() {
 /** Push build to gh-pages
 **************************/
 gulp.task('deploy', function () {
-  return gulp.src("./src/**/*")
-    .pipe(deploy())
+  return gulp.src(options.src + "**/*")
+    .pipe(pages());
 });

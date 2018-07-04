@@ -11,7 +11,7 @@ section {
   padding: 75px 20px;
   background-color: $white;
 
-  &:nth-child(2n) {
+  &:nth-child(2n + 1) {
     background-color: $black;
   }
 
@@ -58,11 +58,13 @@ section {
     margin-bottom: 25px;
   }
   h3 {
-    color: $white;
+    color: $black;
   }
 }
 
 #skillsSection {
+
+  color: $white;
 
   img {
     margin: 15px 0;
@@ -72,7 +74,7 @@ section {
 #aboutSection {
 
   p {
-    color: $white;
+    color: $black;
     padding-bottom: 25px;
   }
 
@@ -80,12 +82,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    // a {
-      // background-color: $white;
-      // border-radius: 50%;
-    // }
   }
+
   img {
     width: 50px;
     margin: 0 10px;
@@ -102,23 +100,25 @@ section {
   textarea,
   input {
     background-color: transparent;
-    border: 1px solid $black;
-    color: $black;
+    border: 1px solid $white;
+    color: $white;
     padding: 10px;
     width: 100%;
     margin-bottom: 15px;
     outline: 0;
 
     &::placeholder {
-      color: $black;
+      color: $white;
     }
   }
 
   button {
-    background-color: $black;
-    border: 1px solid $black;
+    background-color: $white;
+    border: 1px solid $white;
     border-radius: 25px;
-    color: $white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: $black;
     width: 150px;
     padding: 10px;
     margin: 0 auto;

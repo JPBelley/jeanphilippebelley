@@ -6,6 +6,12 @@
   &:hover {
     opacity: 1 !important;
   }
+
+  .hamburger-inner,
+  & .hamburger-inner::before,
+  & .hamburger-inner::after {
+    background-color: $black;
+  }
 }
 
 .is-active {
