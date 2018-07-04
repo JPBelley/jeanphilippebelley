@@ -6,7 +6,7 @@ let concat = require('gulp-concat');
 let autoprefixer = require('gulp-autoprefixer');
 let browserSync = require('browser-sync').create();
 let imagemin = require('gulp-imagemin');
-let deploy = require('gulp-gh-pages');
+let pages = require('gulp-gh-pages');
 let plumber      = require('gulp-plumber');
 let sourcemaps = require('gulp-sourcemaps');
 // À compléter
@@ -89,7 +89,7 @@ gulp.task('browserSync', function() {
 
 /** Push build to gh-pages
 **************************/
-gulp.task('deploy', function () {
-  return gulp.src(options.src + "**/*")
+gulp.task('deploy', ['scripts', 'sass', 'imagemin'], function () {
+  return gulp.src("./src/**/*")
     .pipe(pages());
 });

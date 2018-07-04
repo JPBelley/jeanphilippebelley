@@ -3,6 +3,7 @@ app/
 design/
 node_modules/
 
+.publish
 .DS_Store
 
 # Tracked files:
