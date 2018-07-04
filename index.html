@@ -1,29 +1,168 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>JPBelley | Web Dev</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100vh;
-        width: 100vw;
-      }
-      p {
-        font-family: helvetica;
-      }
-      a {
-        text-decoration: none;
-        color: #3C6C8C;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Hello</h1>
-    <p>I'm building this website in my free time, so it's still under construction!</p>
-    <p>Check out my <a href="https://github.com/JPBelley/" target="_blank">Gihub</a> to know what I'm working on.</p>
-  </body>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+  <title>Jean-Philippe Belley</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="left">
+
+  <!-- Building the menu/nav -->
+  <div class="mobile-nav">
+    <button class="hamburger hamburger--collapse" type="button" aria-label="Menu" aria-controls="navigation">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+  <nav class="right">
+    <ul>
+      <li id="home"> <a href=""> <span>Home</span> </a> </li>
+      <li id="skills"> <a href=""> <span>Skills</span> </a> </li>
+      <li id="porfolio"> <a href=""> <span>Work</span> </a> </li>
+      <li id="about"> <a href=""> <span>About</span> </a> </li>
+      <li id="contact"> <a href=""> <span>Contact</span> </a> </li>
+      <li id="blog"> <a href=""> <span>Blog</span> </a> </li>
+    </ul>
+  </nav> <!-- End of the menu -->
+
+  <!-- Home section -->
+  <section id="homeSection">
+    <div class="hero-text">
+      <div class="my-name">
+        Jean-Philippe Belley
+      </div>
+      <div class="my-job">
+        Web dev
+      </div>
+    </div>
+    <div class="visit">
+      <a href="#">Learn More</a>
+    </div>
+  </section><!-- Home section End -->
+
+  <!-- Portfolio section -->
+  <section id="portfolioSection">
+    <div class="portfolio-section">
+      <div class="portfolio-up">
+        <h3>2018 / Dev at Adfab</h3>
+        <h3>2017 / Dev at Marketing Ultimum</h3>
+        <h3>2016 / Founded Digital Entrepreneurs</h3>
+      </div>
+      <div class="portfolio-down">
+        <h3>Music & Technology Major</h3>
+        <h3>Udem & DeMonfort university</h3>
+        <h3>Psychology Bachelor</h3>
+        <h3>UQAC</h3>
+      </div>
+    </div>
+  </section> <!-- Portfolio section End -->
+
+  <!-- Skills section -->
+  <section id="skillsSection">
+    <div class="skills-section">
+      <div class="skills-up">
+        <h2>Primary</h2>
+        <div class="img-container">
+          <div class="single-img">
+            <img class="desktop-img" src="images/html5.png" alt="">
+            <img class="mobile-img" src="images/html5-black.png" alt="">
+          </div>
+          <div class="single-img">
+            <img class="desktop-img" src="images/js.png" alt="">
+            <img class="mobile-img" src="images/js-black.png" alt="">
+          </div>
+          <div class="single-img">
+            <img class="desktop-img" src="images/css.png" alt="">
+            <img class="mobile-img" src="images/css-black.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="skills-down">
+        <h2>Tools</h2>
+        <div class="img-container">
+          <div class="single-img">
+            <img src="images/gulp.png" alt="">
+          </div>
+          <div class="single-img">
+            <img src="images/npm.png" alt="">
+          </div>
+          <div class="single-img">
+            <img src="images/wordpress.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- Skills section End -->
+
+  <!-- About section -->
+  <section id="aboutSection">
+    <div class="about-container">
+      <div class="about-up">
+          <p>I've worked as a web developer for over a year now. In addition to my love for
+            web development, I have a strong passion for entrepreneurship. This interest
+            led me to co-found Digital Entrepreneurs with Pierre Fortin in 2015. This
+            project has been our real-world university where we have learned from speakers
+            with incredible expertise in online industries, both in Montreal and internationally.
+            My projects are always driven by the desire to find meaning in our work and to keep a
+            balance between work and life so that our dreams do not die. You can follow another
+            passion of mine on Soundcloud.
+          </p>
+      </div>
+      <div class="about-down">
+        <p>Coding is a passion I've been traveling with for a long time. As I remember, I've been the only student in psychology who took a coding class. I refined this skill while studiying music & technology where I had the opportunity to learn Python, Javascript, PHP and pure data. At the moment, I'm always addict to take this hability to the next level by taking classes at UdeM as a part time student and spending most of my learning time improving this skill.
+        </p>
+      </div>
+    </div>
+    <div class="about-icons">
+      <a href="https://www.instagram.com/jpbelley/" class="single-icon" target="_blank">
+        <img src="images/insta.png" alt="">
+      </a>
+      <a href="https://github.com/JPBelley" class="single-icon github" target="_blank">
+        <img src="images/github-black.png" alt="">
+      </a>
+      <a href="https://www.linkedin.com/in/jean-philippe-belley-01558286/" class="single-icon" target="_blank">
+        <img src="images/linkedin.png" alt="">
+      </a>
+      <a href="https://soundcloud.com/phillippb" class="single-icon" target="_blank">
+        <img src="images/soundcloud.png" alt="">
+      </a>
+    </div>
+  </section><!-- About section End -->
+
+  <!-- Contact Section -->
+  <section id="contactSection">
+    <div class="contact-container">
+      <form class="" action="index.html" method="post">
+        <div class="contact-up">
+          <div class="contact-name">
+            <div class="input">
+              <input type="text" name="" value="" placeholder="First Name">
+            </div>
+            <div class="input second-input">
+              <input type="text" name="" value="" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="input">
+              <input type="text" name="" value="" placeholder="Company">
+            </div>
+            <div class="input second-input">
+              <input type="text" name="" value="" placeholder="Subject">
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-down">
+          <button type="submit" name="button">Send</button>
+          <textarea name="name" placeholder="Message"></textarea>
+        </div>
+      </form>
+    </div>
+  </section><!-- Contact Section End -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>

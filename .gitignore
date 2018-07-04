@@ -1,9 +1,0 @@
-# Untracked files:
-app/
-design/
-node_modules/
-
-.DS_Store
-
-# Tracked files:
-!./app/index.html
