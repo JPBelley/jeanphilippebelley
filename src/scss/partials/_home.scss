@@ -36,11 +36,20 @@
     a {
       color: $white;
       position: relative;
+      text-transform: uppercase;
+      font-size: 1rem;
+      letter-spacing: 2px;
 
       &::after {
-        content: "v";
+        content: "";
+        background-image: url('../images/right-header-arrow.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: rotate(90deg);
         position: absolute;
-        top: 15px; right: 0; left: 0;
+        height: 20px;
+        width: 20px;
+        top: 25px; right: 0; left: 0;
         margin: 0 auto;
         text-align: center;
         opacity: 0;

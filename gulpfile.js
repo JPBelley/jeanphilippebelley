@@ -89,7 +89,7 @@ gulp.task('browserSync', function() {
 
 /** Push build to gh-pages
 **************************/
-gulp.task('deploy', ['scripts', 'sass', 'imagemin'], function () {
-  return gulp.src("./src/**/*")
+gulp.task('deploy', function () {
+  return gulp.src("./app/**/*")
     .pipe(pages());
 });

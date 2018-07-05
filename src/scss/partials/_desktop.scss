@@ -5,7 +5,7 @@ body {
   font-family: $font-1;
   font-size: 14px;
   overflow: hidden;
-  transition-delay: 0.2s;
+  // transition-delay: 0.2s;
   transition: 1s;
   position: relative;
 
@@ -98,13 +98,6 @@ nav {
   left: 0;
   margin: 0 50px;
   text-align: right;
-  visibility: hidden;
-  opacity: 0;
-
-  &.visible {
-    visibility: visible;
-    opacity: 1;
-  }
 
   ul {
     display: flex;
@@ -119,8 +112,8 @@ nav {
     transform: none;
     position: relative;
 
-
     @for $i from 1 through 6 {
+
       &:nth-child(#{$i}) a {
         transition-delay: #{($i * .15)}s;
       }
@@ -129,10 +122,12 @@ nav {
 
     a {
       position: absolute;
-      transition: 1.3s;
-      left: 0;
-      right: 0;
+      transition: 0.5s;
+      transition-timing-function: ease-in-out;
+      left: 0px; right: 0;
       font-weight: bold;
+      visibility: hidden;
+      opacity: 0;
     }
 
     span {
@@ -159,6 +154,17 @@ nav {
       right: 0;
       left: 1px;
       width: 100%;
+    }
+  }
+
+  &.visible {
+
+    li {
+      a {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
 }

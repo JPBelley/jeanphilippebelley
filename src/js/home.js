@@ -22,9 +22,9 @@ $( document ).ready(function() {
     $('.visit a').addClass("fade-in");
   }, 1500);
 
-  spanAndFade(myName, 500);
-  spanAndFade(myJob, 750);
-  spanAndFade(visit, 1000);
+  spanAndFade(myName, 250);
+  spanAndFade(myJob, 500);
+  spanAndFade(visit, 750);
 
 
 
