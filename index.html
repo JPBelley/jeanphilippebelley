@@ -18,19 +18,21 @@
   </div>
   <nav class="right">
     <ul>
-      <li id="home"> <a href="#homeSection"> <span>Home</span> </a> </li>
-      <li id="skills"> <a href="#skillsSection"> <span>Skills</span> </a> </li>
-      <li id="porfolio"> <a href="#portfolioSection"> <span>Work</span> </a> </li>
-      <li id="about"> <a href="#aboutSection"> <span>About</span> </a> </li>
-      <li id="contact"> <a href="#contactSection"> <span>Contact</span> </a> </li>
-      <li id="blog"> <a href="#"> <span>Blog</span> </a> </li>
+      <li id="home"> <a href=""> <span>Home</span> </a> </li>
+      <li id="skills"> <a href=""> <span>Skills</span> </a> </li>
+      <li id="porfolio"> <a href=""> <span>Work</span> </a> </li>
+      <li id="about"> <a href=""> <span>About</span> </a> </li>
+      <li id="contact"> <a href=""> <span>Contact</span> </a> </li>
+      <li id="blog"> <a href=""> <span>Blog</span> </a> </li>
     </ul>
   </nav> <!-- End of the menu -->
 
   <!-- Home section -->
   <section id="homeSection">
     <div class="hero-text">
-      <div class="my-name">Jean-Philippe Belley</div>
+      <div class="my-name">
+        Jean-Philippe Belley
+      </div>
       <div class="my-job">
         Web dev
       </div>
@@ -64,13 +66,16 @@
         <h2>Primary</h2>
         <div class="img-container">
           <div class="single-img">
-            <img src="images/html5.png" alt="">
+            <img class="desktop-img" src="images/html5.png" alt="">
+            <img class="mobile-img" src="images/html5-black.png" alt="">
           </div>
           <div class="single-img">
-            <img src="images/js.png" alt="">
+            <img class="desktop-img" src="images/js.png" alt="">
+            <img class="mobile-img" src="images/js-black.png" alt="">
           </div>
           <div class="single-img">
-            <img src="images/css.png" alt="">
+            <img class="desktop-img" src="images/css.png" alt="">
+            <img class="mobile-img" src="images/css-black.png" alt="">
           </div>
         </div>
       </div>
@@ -78,16 +83,13 @@
         <h2>Tools</h2>
         <div class="img-container">
           <div class="single-img">
-            <img class="desktop-img" src="images/gulp.png" alt="">
-            <img class="mobile-img" src="images/gulp-white.png" alt="">
+            <img src="images/gulp.png" alt="">
           </div>
           <div class="single-img">
-            <img class="desktop-img" src="images/npm.png" alt="">
-            <img class="mobile-img" src="images/npm-white.png" alt="">
+            <img src="images/npm.png" alt="">
           </div>
           <div class="single-img">
-            <img class="desktop-img" src="images/wordpress.png" alt="">
-            <img class="mobile-img" src="images/wordpress-white.png" alt="">
+            <img src="images/wordpress.png" alt="">
           </div>
         </div>
       </div>
@@ -115,16 +117,16 @@
     </div>
     <div class="about-icons">
       <a href="https://www.instagram.com/jpbelley/" class="single-icon" target="_blank">
-        <img src="images/insta-black.png" alt="">
+        <img src="images/insta.png" alt="">
       </a>
       <a href="https://github.com/JPBelley" class="single-icon github" target="_blank">
         <img src="images/github-black.png" alt="">
       </a>
       <a href="https://www.linkedin.com/in/jean-philippe-belley-01558286/" class="single-icon" target="_blank">
-        <img src="images/linkedin-black.png" alt="">
+        <img src="images/linkedin.png" alt="">
       </a>
       <a href="https://soundcloud.com/phillippb" class="single-icon" target="_blank">
-        <img src="images/soundcloud-black.png" alt="">
+        <img src="images/soundcloud.png" alt="">
       </a>
     </div>
   </section><!-- About section End -->
@@ -132,29 +134,29 @@
   <!-- Contact Section -->
   <section id="contactSection">
     <div class="contact-container">
-      <form class="" action="https://formspree.io/belleyjeanphilippe@gmail.com" method="POST">
+      <form class="" action="index.html" method="post">
         <div class="contact-up">
           <div class="contact-name">
             <div class="input">
-              <input type="text" name="First" value="" placeholder="First Name">
+              <input type="text" name="" value="" placeholder="First Name">
             </div>
             <div class="input second-input">
-              <input type="text" name="Last" value="" placeholder="Last Name">
+              <input type="text" name="" value="" placeholder="Last Name">
             </div>
           </div>
           <div class="contact-info">
             <div class="input">
-              <input type="text" name="Company" value="" placeholder="Company">
+              <input type="text" name="" value="" placeholder="Company">
             </div>
             <div class="input second-input">
-              <input type="text" name="Subject" value="" placeholder="Subject">
+              <input type="text" name="" value="" placeholder="Subject">
             </div>
           </div>
         </div>
 
         <div class="contact-down">
           <button type="submit" name="button">Send</button>
-          <textarea name="Message" placeholder="Message"></textarea>
+          <textarea name="name" placeholder="Message"></textarea>
         </div>
       </form>
     </div>
