@@ -3,6 +3,7 @@ app/
 design/
 node_modules/
 
+.cache
 .publish
 .DS_Store
 
