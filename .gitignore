@@ -2,7 +2,6 @@
 app/
 design/
 node_modules/
-dist/
 
 .publish
 .DS_Store
