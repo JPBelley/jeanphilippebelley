@@ -4,6 +4,10 @@ body {
     padding: 0;
 }
 
+img {
+    max-width: 100%;
+}
+
 canva {
     display: block;
 }
@@ -14,6 +18,11 @@ canva {
     z-index: -1;
     top: 0;
     left: 0;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 @import './scss/main'

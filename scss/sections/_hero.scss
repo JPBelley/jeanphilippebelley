@@ -70,11 +70,7 @@
     background-size: cover;
   }
 }
-// @for $i from 1 through 12 {
-//   .single-square:nth-child(#{$i}) {
-//     opacity: $i * 0.05;
-//   }
-// }
+
 @for $i from 1 through 12 {
   .single-square:nth-child(#{$i}) {
     div {
@@ -87,4 +83,12 @@
       }
     }
   }
+}
+
+/****
+  Secondary Heros
+*/
+.secondary-hero {
+  padding: 100px 0;
+  text-align: center;
 }
